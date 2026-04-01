@@ -1,0 +1,359 @@
+{
+  "meta": {
+    "code": "zh",
+    "name": "Chinese",
+    "nativeName": "中文"
+  },
+  "dashboard": {
+    "title": "CRUCIX — 情报终端",
+    "bootTitle": "CRUCIX 情报引擎",
+    "bootSubtitle": "本地 Palantir · 31 个数据源",
+    "waitingForSweep": "等待首次扫描...",
+    "sourcesOk": "数据源正常",
+    "lastSweep": "上次扫描",
+    "nextSweep": "下次扫描",
+    "sweep": "扫描",
+    "sources": "数据源",
+    "delta": "变化",
+    "highAlert": "高级警报",
+    "riskOff": "避险",
+    "riskOn": "风险偏好",
+    "mixed": "混合",
+    "terminalActive": "终端运行中",
+    "perf": "性能",
+    "perfLow": "低",
+    "perfHigh": "高",
+    "guideBtn": "信号说明"
+  },
+  "boot": {
+    "initializing": "正在初始化 CRUCIX 引擎 v2.1.0",
+    "connecting": "正在连接 {count} 个 OSINT 数据源...",
+    "sourceGroup1": "OPENSKY · FIRMS · KIWISDR · 海事",
+    "sourceGroup2": "FRED · BLS · EIA · 财政部 · GSCPI",
+    "sourceGroup3": "TELEGRAM · SAFECAST · EPA · WHO · OFAC",
+    "sourceGroup4": "GDELT · NOAA · 专利 · BLUESKY · REDDIT",
+    "sourceGroup5": "USGS · ECB · CVE · 哥白尼 · CELESTRAK",
+    "sweepComplete": "扫描完成 — {ok}/{total} 个数据源",
+    "ok": "正常",
+    "acledLayer": "ACLED 冲突图层",
+    "events": "事件",
+    "degraded": "降级",
+    "flightCorridors": "航线走廊",
+    "active": "活跃",
+    "dualProjection": "双重投影",
+    "ready": "就绪",
+    "intelligenceSynthesis": "情报综合"
+  },
+  "panels": {
+    "sensorGrid": "传感器网格",
+    "tradeIdeas": "可操作信号",
+    "osintFeed": "OSINT 信息流",
+    "osintStream": "OSINT 数据流",
+    "nuclearWatch": "核监测",
+    "newsTicker": "实时新闻",
+    "sweepDelta": "扫描变化",
+    "macroMarkets": "宏观 + 市场",
+    "healthAlerts": "健康警报",
+    "riskGauges": "风险仪表",
+    "crossSourceSignals": "跨源信号",
+    "signalCore": "信号核心",
+    "seismicWatch": "地震监测",
+    "cyberWatch": "网络安全监测",
+    "spaceWatch": "太空监测",
+    "europeAlerts": "欧洲警报",
+    "ecbIndicators": "欧央行指标"
+  },
+  "layers": {
+    "airActivity": "空中活动",
+    "thermalSpikes": "热点异常",
+    "sdrCoverage": "SDR 覆盖",
+    "maritimeWatch": "海事监测",
+    "nuclearSites": "核设施",
+    "conflictEvents": "冲突事件",
+    "healthWatch": "健康监测",
+    "worldNews": "国际新闻",
+    "osintFeed": "OSINT 信息",
+    "theaters": "战区",
+    "nightDet": "夜间探测",
+    "online": "在线",
+    "chokepoints": "咽喉要道",
+    "monitors": "监测站",
+    "fatalities": "伤亡",
+    "whoAlerts": "WHO 警报",
+    "rssGeolocated": "RSS 定位",
+    "earthquakes": "地震",
+    "seismicEvents": "地震事件",
+    "cyberVulns": "网络漏洞",
+    "spaceActivity": "太空活动",
+    "europeEmergency": "欧洲紧急情况"
+  },
+  "map": {
+    "worldNews": "国际新闻",
+    "healthAlert": "健康警报",
+    "chokepoint": "咽喉要道",
+    "nuclearSite": "核设施",
+    "osintEvent": "OSINT 事件",
+    "thermalDetection": "热点探测",
+    "aircraft": "航空器",
+    "rssGeolocated": "RSS 定位",
+    "airTraffic": "空中交通",
+    "thermalFire": "热点/火灾",
+    "conflict": "冲突",
+    "sdrReceiver": "SDR 接收机",
+    "scrollToZoom": "滚轮缩放 · 拖拽平移",
+    "globeMode": "球形模式",
+    "flatMode": "平面模式",
+    "earthquake": "地震",
+    "disaster": "灾害",
+    "weatherAlert": "气象警报",
+    "epaRadNet": "EPA 辐射网",
+    "spaceStation": "空间站",
+    "gdeltEvent": "GDELT 事件"
+  },
+  "ideas": {
+    "confidence": "置信度",
+    "horizon": "时间跨度",
+    "risk": "风险",
+    "signals": "信号",
+    "rationale": "依据",
+    "aiEnhanced": "AI 增强",
+    "llmOff": "LLM 关闭",
+    "pending": "等待中",
+    "llmNotConfigured": "LLM 未配置",
+    "llmHelp": "在 .env 中设置 LLM_PROVIDER + 凭据以启用 AI 交易建议",
+    "disclosure": "仅供参考。本内容不构成任何形式的投资建议、买卖证券的推荐或任何形式的招揽。所有基于信号的分析均来自公开 OSINT 数据，不应作为投资决策依据。在进行任何投资前，请咨询持牌财务顾问。过往表现不代表未来结果。"
+  },
+  "regions": {
+    "world": "全球",
+    "americas": "美洲",
+    "europe": "欧洲",
+    "middleEast": "中东",
+    "asiaPacific": "亚太",
+    "africa": "非洲"
+  },
+  "badges": {
+    "radiation": "辐射",
+    "live": "实时",
+    "delayed": "延迟",
+    "items": "条目",
+    "urgent": "紧急",
+    "worldview": "全球视野",
+    "hotMetrics": "热点指标",
+    "stress": "压力",
+    "sweeping": "扫描中...",
+    "europe": "欧洲",
+    "orbital": "轨道"
+  },
+  "delta": {
+    "baseline": "基线",
+    "escalation": "升级",
+    "deescalation": "降级",
+    "stable": "稳定",
+    "newSignals": "新信号",
+    "resolved": "已解决",
+    "noChanges": "自上次扫描起无变化",
+    "changes": "变化",
+    "critical": "严重",
+    "new": "新"
+  },
+  "metrics": {
+    "wtiCrude": "WTI 原油",
+    "brent": "布伦特",
+    "natGas": "天然气",
+    "vix": "VIX",
+    "fedFunds": "联邦基金",
+    "gscpi": "GSCPI",
+    "cpiMom": "CPI 环比",
+    "unemployment": "失业率",
+    "hySpread": "高收益利差",
+    "usdIndex": "美元指数",
+    "joblessClaims": "初请失业金",
+    "mortgage30y": "30年抵押贷款",
+    "m2Supply": "M2 货币供应",
+    "natDebt": "国家债务",
+    "wti5day": "WTI 5日",
+    "indexes": "指数",
+    "crypto": "加密货币",
+    "energyMacro": "能源 + 宏观",
+    "vsPrior": "较前值",
+    "ecbRate": "欧央行利率",
+    "eurusd": "欧元/美元",
+    "euM3": "欧盟 M3",
+    "euHicp": "欧盟 HICP",
+    "earthquakes7d": "地震（7天）",
+    "criticalCves": "严重 CVE",
+    "spaceObjects": "太空物体",
+    "starlink": "星链",
+    "europeAlerts": "欧盟警报"
+  },
+  "signalMetrics": {
+    "incidentTempo": "事件频率",
+    "airTheaters": "空中战区",
+    "thermalSpikes": "热点异常",
+    "sdrNodes": "SDR 节点",
+    "chokepoints": "咽喉要道",
+    "whoAlerts": "WHO 警报"
+  },
+  "nuclear": {
+    "allSitesNormal": "所有站点正常",
+    "anomalyDetected": "检测到异常",
+    "noData": "无数据"
+  },
+  "seismic": {
+    "noRecentQuakes": "无重大地震",
+    "majorQuake": "检测到重大地震",
+    "tsunamiRisk": "海啸风险",
+    "mag": "M"
+  },
+  "cyber": {
+    "noAlerts": "无严重 CVE",
+    "criticalAlert": "严重漏洞",
+    "cvss": "CVSS",
+    "critical": "严重"
+  },
+  "space": {
+    "noActivity": "活动正常",
+    "launchDetected": "检测到发射活动",
+    "objectsTracked": "跟踪中的物体",
+    "newLast30d": "新增（30天）",
+    "satellites": "颗卫星",
+    "recentLaunches": "近期发射",
+    "totalTracked": "跟踪总数",
+    "byCountry": "按国家",
+    "constellations": "星座",
+    "launches": "次发射"
+  },
+  "europe": {
+    "noAlerts": "无活跃警报",
+    "activeAlerts": "活跃警报",
+    "fires": "火灾",
+    "floods": "洪水",
+    "types": "类型"
+  },
+  "time": {
+    "justNow": "刚刚",
+    "hoursAgo": "{hours} 小时前",
+    "daysAgo": "{days} 天前"
+  },
+  "bot": {
+    "commands": {
+      "status": "获取当前系统健康状态、上次扫描时间、数据源状态",
+      "sweep": "触发手动扫描",
+      "brief": "获取最新情报的简要摘要",
+      "portfolio": "显示当前持仓和盈亏（需连接 Alpaca）",
+      "alerts": "显示最近警报历史",
+      "mute": "静音警报 1 小时（或 /mute 2h、/mute 4h）",
+      "unmute": "恢复警报",
+      "help": "显示可用命令"
+    },
+    "messages": {
+      "alertsMuted": "🔇 警报已静音 {hours} 小时 — 至 {time} UTC",
+      "useUnmute": "使用 /unmute 恢复。",
+      "alertsResumed": "🔔 已恢复警报。您将收到下一次信号评估。",
+      "sweepTriggered": "🚀 手动扫描已触发。如检测到重要信息将发送警报。",
+      "sweepInProgress": "🔄 扫描正在进行中，请稍候。",
+      "noDataYet": "⏳ 暂无数据 — 等待首次扫描完成。",
+      "noRecentAlerts": "无最近警报。",
+      "recentAlerts": "📋 最近警报（最后 {count} 条）",
+      "commandsTip": "提示：命令不区分大小写",
+      "commandFailed": "❌ 命令失败：{error}",
+      "portfolioNotAvailable": "📊 组合集成需要 Alpaca MCP 连接。\n请使用 Crucix 仪表板或 Claude 代理进行组合查询。"
+    },
+    "status": {
+      "title": "🖥️ CRUCIX 状态",
+      "uptime": "运行时间",
+      "lastSweep": "上次扫描",
+      "nextSweep": "下次扫描",
+      "sweepInProgress": "扫描进行中",
+      "yes": "🔄 是",
+      "no": "⏸️ 否",
+      "sources": "数据源",
+      "failed": "失败",
+      "llm": "LLM",
+      "enabled": "✅",
+      "disabled": "❌ 已禁用",
+      "sseClients": "SSE 客户端",
+      "dashboard": "仪表板",
+      "pending": "等待中",
+      "never": "从未"
+    },
+    "brief": {
+      "title": "📋 CRUCIX 简报",
+      "direction": "方向",
+      "changes": "变化",
+      "criticalChanges": "严重",
+      "osint": "📡 OSINT",
+      "urgentSignals": "紧急信号",
+      "totalPosts": "总帖子数",
+      "topIdeas": "💡 热门信号"
+    },
+    "alertTiers": {
+      "flash": "即时",
+      "priority": "优先",
+      "routine": "常规"
+    }
+  },
+  "alerts": {
+    "tiers": {
+      "flash": {
+        "label": "即时警报",
+        "description": "需要立即行动 — 影响市场、时间紧迫"
+      },
+      "priority": {
+        "label": "优先警报",
+        "description": "重要信号集群 — 数小时内行动"
+      },
+      "routine": {
+        "label": "常规警报",
+        "description": "值得关注的变化 — 仅供参考，无紧迫性"
+      }
+    },
+    "confidence": {
+      "high": "高",
+      "medium": "中",
+      "low": "低"
+    },
+    "fields": {
+      "direction": "方向",
+      "confidence": "置信度",
+      "crossCorrelation": "交叉关联",
+      "action": "操作",
+      "signals": "信号",
+      "monitor": "监控"
+    },
+    "messages": {
+      "alertsMuted": "警报已静音",
+      "mutedUntil": "警报已静音 {hours} 小时 — 至 {time} UTC。",
+      "useUnmuteToResume": "使用 /unmute 恢复。",
+      "alertsResumed": "警报已恢复",
+      "willReceiveNext": "您将收到下一次信号评估。"
+    },
+    "ruleBasedHeadlines": {
+      "nuclearAnomaly": "检测到核异常",
+      "crossDomainSignals": "{count} 个严重跨域信号",
+      "escalatingSignals": "{count} 个升级信号",
+      "osintSurge": "OSINT 激增：{count} 条新紧急帖子",
+      "signalChangeDetected": "检测到信号变化"
+    }
+  },
+  "discord": {
+    "commands": {
+      "status": "系统健康状态、上次扫描时间、数据源状态",
+      "sweep": "触发手动扫描",
+      "brief": "情报简要摘要",
+      "portfolio": "组合状态（需连接 Alpaca）",
+      "alerts": "最近警报历史",
+      "mute": "静音警报（默认 1 小时）",
+      "unmute": "恢复警报",
+      "muteHoursOption": "静音小时数（默认：1）"
+    }
+  },
+  "llm": {
+    "systemPrompt": "You are a quantitative analyst at a macro intelligence firm. You receive structured OSINT + economic data from 25 sources and produce 5-8 actionable trade ideas.\n\nRules:\n- Each idea must cite specific data points from the input\n- Include entry rationale, risk factors, and time horizon\n- Blend geopolitical, economic, and market signals — cross-correlate across domains\n- Be specific: name instruments (tickers, futures, ETFs), not vague sectors\n- If delta shows significant changes, lead with those\n- Do NOT repeat ideas from the \"previous ideas\" list unless conditions have materially changed\n- Rate confidence: HIGH (multiple confirming signals), MEDIUM (thesis supported), LOW (speculative)\n\nOutput ONLY valid JSON array. Each object:\n{\n  \"title\": \"Short title (max 10 words)\",\n  \"type\": \"LONG|SHORT|HEDGE|WATCH|AVOID\",\n  \"ticker\": \"Primary instrument\",\n  \"confidence\": \"HIGH|MEDIUM|LOW\",\n  \"rationale\": \"2-3 sentence explanation citing specific data\",\n  \"risk\": \"Key risk factor\",\n  \"horizon\": \"Intraday|Days|Weeks|Months\",\n  \"signals\": [\"signal1\", \"signal2\"]\n}"
+  },
+  "api": {
+    "errors": {
+      "noDataYet": "暂无数据 — 首次扫描进行中"
+    }
+  }
+}

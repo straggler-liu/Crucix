@@ -19,7 +19,7 @@
   --text:#e8f4f0;--dim:#6a8a82;--accent:#64f0c8;--accent2:#44ccff;
   --warn:#ffb84c;--danger:#ff5f63;--mono:'IBM Plex Mono',monospace;--sans:'Space Grotesk',sans-serif;
 }
-html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--sans);overflow-x:hidden}
+html{font-size:15px}body{height:100%;background:var(--bg);color:var(--text);font-family:var(--sans);overflow-x:hidden}
 .bg-grid{position:fixed;inset:0;pointer-events:none;opacity:0;
   background-image:linear-gradient(rgba(100,240,200,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(100,240,200,0.03) 1px,transparent 1px);
   background-size:60px 60px;mask-image:radial-gradient(ellipse at 50% 30%,black 20%,transparent 70%)}
@@ -35,7 +35,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 .logo-ring::before{content:'';position:absolute;inset:-8px;border:1px solid var(--border);border-radius:50%;border-top-color:var(--accent);animation:spin 2s linear infinite}
 .logo-ring::after{content:'';position:absolute;inset:-16px;border:1px solid rgba(100,240,200,0.06);border-radius:50%;border-bottom-color:rgba(100,240,200,0.15);animation:spin 3s linear infinite reverse}
 @keyframes spin{to{transform:rotate(360deg)}}
-.logo-text{font-family:var(--mono);font-size:18px;font-weight:700;letter-spacing:0.2em;color:var(--accent)}
+.logo-text{font-family:var(--mono);font-size:20px;font-weight:700;letter-spacing:0.2em;color:var(--accent)}
 #bootLines{margin-top:32px;font-family:var(--mono);font-size:12px;color:var(--dim);text-align:left;line-height:2;min-width:340px;opacity:0}
 #bootLines .ok{color:var(--accent)}
 #bootLines .count{color:var(--accent);font-weight:600}
@@ -65,7 +65,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 .perf-pill:hover{border-color:var(--accent2);color:var(--text);background:rgba(68,204,255,0.08)}
 
 /* GRID */
-.grid{display:grid;grid-template-columns:240px 1fr 340px;gap:10px;margin-top:10px;min-height:calc(100vh - 100px)}
+.grid{display:grid;grid-template-columns:260px 1fr 360px;gap:10px;margin-top:10px;min-height:calc(100vh - 100px)}
 .col{display:flex;flex-direction:column;gap:10px}
 .g-panel{border:1px solid var(--border);background:var(--glass);backdrop-filter:blur(16px);padding:12px;position:relative;overflow:hidden}
 .g-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(100,240,200,0.15),transparent);pointer-events:none}
@@ -161,7 +161,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 .lower .lp-macro{flex:2.5 1 360px}
 .lower .lp-ideas{flex:1.5 1 300px}
 .lower-wide{width:100%}
-.metrics-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px}
+.metrics-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:6px}
 .mc{padding:10px;border:1px solid rgba(255,255,255,0.05);background:rgba(255,255,255,0.02)}
 .mc .ml{font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--dim)}
 .mc .mv{font-family:var(--mono);font-size:18px;font-weight:600;margin-top:6px;display:block}
@@ -270,7 +270,7 @@ body.low-perf .ticker-wrap::-webkit-scrollbar-track{background:transparent}
 body.low-perf .ticker-wrap::-webkit-scrollbar-thumb{background:rgba(100,240,200,0.2);border-radius:2px}
 
 /* RESPONSIVE */
-@media(max-width:1400px){.grid{grid-template-columns:240px 1fr 320px}.metrics-row{grid-template-columns:repeat(3,1fr)}.src-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1400px){.grid{grid-template-columns:260px 1fr 340px}.metrics-row{grid-template-columns:repeat(3,1fr)}.src-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:1100px){
   #main{padding:8px}
   .topbar{padding:10px 12px}
@@ -316,10 +316,77 @@ body.low-perf .ticker-wrap::-webkit-scrollbar-thumb{background:rgba(100,240,200,
 .proj-toggle:hover{border-color:var(--accent);color:var(--accent)}
 .proj-toggle.active{color:var(--bg);background:var(--accent);border-color:var(--accent)}
 /* GLOBE.GL overrides */
-#globeViz .scene-tooltip{font-family:var(--mono)!important;font-size:10px!important;background:rgba(6,10,14,0.9)!important;border:1px solid rgba(100,240,200,0.3)!important;color:var(--text)!important;padding:4px 8px!important;letter-spacing:0.05em}
+#globeViz .scene-tooltip{font-family:var(--mono)!important;font-size:12px!important;background:rgba(6,10,14,0.9)!important;border:1px solid rgba(100,240,200,0.3)!important;color:var(--text)!important;padding:4px 8px!important;letter-spacing:0.05em}
 
 /* IDEA HORIZON BADGE */
 .idea-horizon{font-family:var(--mono);font-size:8px;letter-spacing:0.08em;text-transform:uppercase;padding:1px 5px;border:1px solid rgba(100,240,200,0.15);color:var(--dim);margin-left:6px}
+
+/* ── READABILITY OVERRIDES — scale all text up for comfortable reading ── */
+#bootLines{font-size:14px!important}
+#bootFinal{font-size:16px!important}
+.brand{font-size:17px!important}
+.regime-chip{font-size:13px!important}
+.region-btn{font-size:13px!important;padding:7px 14px!important}
+.meta-pill{font-size:13px!important}
+.alert-badge{font-size:13px!important}
+.guide-btn{font-size:13px!important}
+.sec-head h3{font-size:12px!important}
+.badge{font-size:11px!important}
+.layer-name{font-size:14px!important}
+.layer-sub{font-size:12px!important}
+.layer-count{font-size:15px!important}
+.nuke-ok{font-size:12px!important}
+.site-row{font-size:13px!important}
+.site-val{font-size:12px!important}
+.econ-row{font-size:13px!important}
+.map-legend{font-size:12px!important}
+.map-hint{font-size:11px!important}
+.map-ctrl-btn{font-size:18px!important}
+.map-ctrl-btn.map-toggle{font-size:16px!important}
+.map-popup .pp-head{font-size:12px!important}
+.map-popup .pp-text{font-size:13px!important}
+.map-popup .pp-meta{font-size:12px!important}
+.map-popup .pp-close{font-size:16px!important}
+.glossary-kicker{font-size:12px!important}
+.glossary-title{font-size:20px!important}
+.glossary-sub{font-size:13px!important}
+.glossary-term strong{font-size:13px!important}
+.glossary-tag{font-size:11px!important}
+.glossary-line{font-size:13px!important}
+.glossary-label{font-size:11px!important}
+.glossary-foot{font-size:11px!important}
+.map-loading-text{font-size:12px!important}
+.mc .ml{font-size:11px!important}
+.mc .mv{font-size:20px!important}
+.mc .ms{font-size:11px!important}
+.signal-row strong{font-size:12px!important}
+.signal-row p{font-size:13px!important}
+.src-item{font-size:13px!important}
+.ic .ic-ch{font-size:11px!important}
+.ic .ic-t{font-size:13px!important}
+.ic .ic-m{font-size:11px!important}
+.sm .sml{font-size:12px!important}
+.sm .smv{font-size:16px!important}
+.idea-card .idea-type{font-size:11px!important}
+.idea-card .idea-title{font-size:14px!important}
+.idea-card .idea-text{font-size:12px!important}
+.idea-card .idea-conf{font-size:11px!important}
+.disclosure{font-size:10px!important}
+.tk-src{font-size:10px!important}
+.tk-head{font-size:13px!important}
+.tk-time{font-size:10px!important}
+.delta-badge{font-size:10px!important}
+.delta-row{font-size:12px!important}
+.delta-val{font-size:11px!important}
+.ideas-src{font-size:10px!important}
+.idea-horizon{font-size:10px!important}
+.proj-toggle{font-size:11px!important}
+.tk-card .tk-link{font-size:12px!important}
+@media(max-width:1100px){
+  .region-btn,.meta-pill,.alert-badge,.guide-btn{font-size:12px!important}
+  .map-hint{font-size:10px!important}
+  .leg-item{font-size:10px!important}
+}
 </style>
 </head>
 <body>
@@ -659,9 +726,9 @@ function renderLeftRail(){
         <div class="econ-row"><span class="elabel">Starlink</span><span class="eval">${D.space.constellations?.starlink||0}</span></div>
         <div class="econ-row"><span class="elabel">OneWeb</span><span class="eval">${D.space.constellations?.oneweb||0}</span></div>
         ${D.space.iss ? `<div class="econ-row"><span class="elabel">ISS</span><span class="eval" style="color:var(--accent)">ALT ${((D.space.iss.apogee+D.space.iss.perigee)/2).toFixed(0)} km</span></div>` : ''}
-        ${Object.entries(D.space.militaryByCountry||{}).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([c,n])=>`<div class="econ-row"><span class="elabel" style="padding-left:8px">${c}</span><span class="eval" style="font-size:10px">${n} mil sats</span></div>`).join('')}
-        ${(D.space.signals||[]).length ? `<div style="margin-top:6px;padding:6px 8px;border:1px solid rgba(68,204,255,0.2);background:rgba(68,204,255,0.04);font-family:var(--mono);font-size:9px;color:var(--accent2);line-height:1.5">${D.space.signals.slice(0,2).join('<br>')}</div>` : ''}
-      ` : '<div style="font-family:var(--mono);font-size:10px;color:var(--dim)">NO SPACE DATA</div>'}
+        ${Object.entries(D.space.militaryByCountry||{}).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([c,n])=>`<div class="econ-row"><span class="elabel" style="padding-left:8px">${c}</span><span class="eval" style="font-size:13px">${n} mil sats</span></div>`).join('')}
+        ${(D.space.signals||[]).length ? `<div style="margin-top:6px;padding:6px 8px;border:1px solid rgba(68,204,255,0.2);background:rgba(68,204,255,0.04);font-family:var(--mono);font-size:12px;color:var(--accent2);line-height:1.5">${D.space.signals.slice(0,2).join('<br>')}</div>` : ''}
+      ` : '<div style="font-family:var(--mono);font-size:13px;color:var(--dim)">NO SPACE DATA</div>'}
     </div>`;
 }
 
@@ -1438,10 +1505,10 @@ function renderLower(){
       <div class="idea-title">${idea.title}</div>
       <div class="idea-text">${idea.text||idea.rationale||''}</div>
       ${idea.risk ? `<div class="idea-text" style="color:var(--warn);margin-top:3px">Risk: ${idea.risk}</div>` : ''}
-    </div>`).join('') : `<div style="padding:20px;text-align:center;color:var(--dim);font-family:var(--mono);font-size:11px">
-      <div style="font-size:24px;margin-bottom:8px;opacity:0.3">&#9888;</div>
+    </div>`).join('') : `<div style="padding:20px;text-align:center;color:var(--dim);font-family:var(--mono);font-size:13px">
+      <div style="font-size:28px;margin-bottom:8px;opacity:0.3">&#9888;</div>
       <div>LLM NOT CONFIGURED</div>
-      <div style="font-size:9px;margin-top:6px;opacity:0.6">Set LLM_PROVIDER + credentials in .env to enable AI-powered trade ideas</div>
+      <div style="font-size:11px;margin-top:6px;opacity:0.6">Set LLM_PROVIDER + credentials in .env to enable AI-powered trade ideas</div>
     </div>`;
 
 
@@ -1455,22 +1522,22 @@ function renderLower(){
   const macroPanel = `<div class="g-panel lp-macro">
       <div class="sec-head"><h3>${t('panels.macroMarkets','Macro + Markets')}</h3><span class="badge">${mkt.timestamp?t('badges.live','LIVE'):t('badges.delayed','DELAYED')}</span></div>
       ${hasMarkets?`<div style="margin-bottom:8px">
-        <div style="font-family:var(--mono);font-size:9px;color:var(--dim);margin-bottom:4px;letter-spacing:1px">INDEXES</div>
+        <div style="font-family:var(--mono);font-size:12px;color:var(--dim);margin-bottom:4px;letter-spacing:1px">INDEXES</div>
         <div class="metrics-row">${indexCards}</div>
       </div>
       <div style="margin-bottom:8px">
-        <div style="font-family:var(--mono);font-size:9px;color:var(--dim);margin-bottom:4px;letter-spacing:1px">CRYPTO</div>
+        <div style="font-family:var(--mono);font-size:12px;color:var(--dim);margin-bottom:4px;letter-spacing:1px">CRYPTO</div>
         <div class="metrics-row">${cryptoCards}</div>
       </div>`:''}
       <div style="margin-bottom:8px">
-        <div style="font-family:var(--mono);font-size:9px;color:var(--dim);margin-bottom:4px;letter-spacing:1px">ENERGY + METALS + MACRO</div>
+        <div style="font-family:var(--mono);font-size:12px;color:var(--dim);margin-bottom:4px;letter-spacing:1px">ENERGY + METALS + MACRO</div>
         <div class="metrics-row">${metrics.map(m=>{
           const sparkSvg = m.spark ? mkSparkSvg(m.spark, m.sparkUp) : '';
           return `<div class="mc"><div class="ml">${m.l}</div><span class="mv">${m.v}${sparkSvg}</span><span class="ms">${m.s}</span><div class="mbar"><span style="width:${m.p}%"></span></div></div>`;
         }).join('')}</div>
       </div>
       <div style="margin-top:6px">
-        <div style="font-family:var(--mono);font-size:10px;color:var(--dim);margin-bottom:4px">WTI 5-DAY</div>
+        <div style="font-family:var(--mono);font-size:12px;color:var(--dim);margin-bottom:4px">WTI 5-DAY</div>
         <div class="spark">${sparkHtml}</div>
       </div>
     </div>`;
@@ -1520,7 +1587,7 @@ function renderRight(){
     const val = s.pctChange!==undefined?`${s.pctChange}%`:`${s.change}`;
     deltaRows.push(`<div class="delta-row"><span class="delta-badge down">&#9660;</span><span class="delta-label">${s.label||s.key}</span><span class="delta-val">${s.from}→${s.to} (${val})</span></div>`);
   }
-  const deltaHtml = hasDelta ? deltaRows.join('') : `<div style="padding:12px;text-align:center;color:var(--dim);font-family:var(--mono);font-size:10px">${t('delta.noChanges','No changes since last sweep')}</div>`;
+  const deltaHtml = hasDelta ? deltaRows.join('') : `<div style="padding:12px;text-align:center;color:var(--dim);font-family:var(--mono);font-size:12px">${t('delta.noChanges','No changes since last sweep')}</div>`;
 
   document.getElementById('rightRail').innerHTML=`
     <div class="g-panel right-signals">
@@ -1534,7 +1601,7 @@ function renderRight(){
     </div>
     <div class="g-panel right-delta">
       <div class="sec-head"><h3>${t('panels.sweepDelta','Sweep Delta')}</h3><span class="badge ${dirClass}">${dirEmoji} ${ds.direction?t('delta.'+ds.direction,ds.direction.toUpperCase()):t('delta.baseline','BASELINE')}</span></div>
-      ${hasDelta?`<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px;font-family:var(--mono);font-size:10px">
+      ${hasDelta?`<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px;font-family:var(--mono);font-size:12px">
         <span style="color:var(--dim)">${t('delta.changes','Changes')}: <span style="color:var(--accent)">${ds.totalChanges}</span></span>
         <span style="color:var(--dim)">${t('delta.critical','Critical')}: <span style="color:${ds.criticalChanges>0?'var(--warn)':'var(--dim)'}">${ds.criticalChanges||0}</span></span>
         ${ds.signalBreakdown?`<span style="color:var(--dim)">${t('delta.new','New')}: <span style="color:#4dd0e1">${ds.signalBreakdown.new}</span> &#8593;${ds.signalBreakdown.escalated} &#8595;${ds.signalBreakdown.deescalated}</span>`:''}
